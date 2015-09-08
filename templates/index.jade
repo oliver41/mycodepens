@@ -1,0 +1,24 @@
+extends layouts/default
+
+append config
+	- var PageTitle = 'Grid & Layout on Codepen'
+	- var modernizr = true
+	- var GoogleAnalytics = false
+
+
+block content
+	main
+		.site-width
+			h1
+				block title
+
+			p If you’re not using Jade, you’re missing out on some of the fastest HTML you’ll ever produce as well as boilerplate templating methods that will slash your development time in half.
+
+			ul
+				li: a(href='codepen01.html') Calc Grid - Cory Simmons
+				li: a(href='codepen02.html') Grid Layout Green
+				li: a(href='codepen03.html') The Row Machine - Chris Coyier
+				li: a Link Four
+				li: a Link Five
+
+			p In “Top Speed HTML Dev with Jade” you’ll learn how to generate full HTML from quick and easy shorthand. You’ll th

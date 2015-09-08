@@ -1,0 +1,45 @@
+$margin: 1.5%;
+
+code {
+  background: #2db34a;
+  border-radius: 6px;
+  color: #fff;
+  display: block;
+  font: 1.5em/1.5 "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+body {
+  max-width: 90%;
+  margin: 3em 5%;
+}
+header,
+section,
+aside,
+footer {
+  margin: 0 $margin 1.5em $margin;
+}
+section {
+  float: left;
+  width: calc(100% / 3 * 2 - #{$margin} * 2 );
+}
+section.oneThird {
+  float: left;
+  width: calc(100% / 3 - #{$margin} * 2);
+  &:last-of-type {
+    float: right;
+  }
+}
+section.inline-block {
+  display: inline-block;
+  width: calc(100% / 3 - #{$margin} * 2);
+}
+aside {
+  float: right;
+  width: calc(100% / 3 - #{$margin} * 2 );
+}
+footer {
+  clear: both;
+  margin-bottom: 0;
+}

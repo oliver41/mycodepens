@@ -1,0 +1,143 @@
+<section class="center-it page">
+  <h1>calc<a href="https://github.com/corysimmons/calcGrid" target="_blank"><img src="http://corysimmons.github.io/calcGrid/github.svg" title="Feed me delicious Stars"></a>Grid</h1>
+</section>
+<section class="page">
+  <div>
+
+    <h2>row &amp; column</h2>
+    <div class="example">
+      <div>
+
+        <div class="code">
+
+<pre><code>&#x3C;section&#x3E;
+  &#x3C;div&#x3E;
+
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+
+  &#x3C;/div&#x3E;
+&#x3C;/section&#x3E;
+</pre></code>
+<pre><code>section
+  row()
+
+.block
+  column(1/4)
+</pre></code>
+
+        </div>
+        <div class="display example1">
+
+          <section>
+            <div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="page">
+  <div>
+
+    <h2>offset</h2>
+    <div class="example">
+      <div>
+
+        <div class="code">
+
+<pre><code>&#x3C;section&#x3E;
+  &#x3C;div&#x3E;
+
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;&#x3C;/div&#x3E;
+
+  &#x3C;/div&#x3E;
+&#x3C;/section&#x3E;
+</pre></code>
+<pre><code>section
+  row()
+
+.block
+  column(1/4)
+  &:nth-child(2)
+    offset(1/4)
+</pre></code>
+
+        </div>
+        <div class="display example2">
+
+          <section>
+            <div>
+              <div class="block"></div>
+              <div class="block"></div>
+              <div class="block"></div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="page">
+  <div>
+
+    <h2>shift</h2>
+    <div class="example">
+      <div>
+
+        <div class="code">
+
+<pre><code>&#x3C;section&#x3E;
+  &#x3C;div&#x3E;
+
+    &#x3C;div class=&#x22;block&#x22;&#x3E;1&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;block&#x22;&#x3E;2&#x3C;/div&#x3E;
+
+  &#x3C;/div&#x3E;
+&#x3C;/section&#x3E;
+</pre></code>
+<pre><code>section
+  row()
+
+.block
+  column(1/2)
+  &:nth-child(1)
+    shift(1/2)
+  &:nth-child(2)
+    shift(-1/2)
+</pre></code>
+
+        </div>
+        <div class="display example3">
+
+          <section>
+            <div>
+              <div class="block">1</div>
+              <div class="block">2</div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

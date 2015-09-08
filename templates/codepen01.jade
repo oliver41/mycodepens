@@ -1,0 +1,15 @@
+extends layouts/default
+
+append config
+	- var PageTitle = 'Calc Grid'
+	- var modernizr = true
+	- var GoogleAnalytics = false
+	
+block stylesheets
+	link( href='css/codepen01.css', rel='stylesheet', type='text/css' )
+	
+block scripts
+	script( src='js/codepen01.js' )
+
+block content
+	include content/codepen01.html

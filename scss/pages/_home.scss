@@ -1,0 +1,33 @@
+
+@include edit(red);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body, .listings-grid {
+  height: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.listings-grid {
+  @include center(750px);
+}
+
+li {
+  @include waffle('1/3');
+  @media (max-width: 1000px) {
+    @include waffle('1/2');
+  }
+  @media (max-width: 750px) {
+    @include waffle();
+  }
+}

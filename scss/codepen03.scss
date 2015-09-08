@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #222;
+}
+
+.wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 1%;
+  padding-right: 1%;
+}
+
+@mixin rowMachine($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.person {
+  @include rowMachine(5, 2%);
+  background: white;
+  padding: 10px;
+  float: left;
+
+  @media (max-width: 1200px) {
+    @include rowMachine(4, 2%);
+  }
+
+  @media (max-width: 980px) {
+    @include rowMachine(3, 4%);
+  }
+
+  @media (max-width: 700px) {
+    @include rowMachine(2, 3%);
+  }
+
+  @media (max-width: 450px) {
+    @include rowMachine(1, 0%);
+    margin-bottom: 3% !important;
+  }
+  img {
+    max-width: 100%;
+  }
+}
